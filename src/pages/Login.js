@@ -15,7 +15,7 @@ export default function Login() {
       <FormInput placeholder="Nome" />
       <FormInput placeholder="Email" />
       <FormButton string="Entrar" />
-      <FormOutlinedButton string="Cadastrar" />
+      <FormOutlinedButton string="Cadastro" />
     </CenteredView>
   );
 }

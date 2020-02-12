@@ -17,6 +17,7 @@ export const StyledInput = styled.TextInput`
   font-size: 18px;
   padding-left: 15px;
   margin-top: 30px;
+  background-color: white;
 `;
 
 export const FullButton = styled.TouchableOpacity`
