@@ -1,13 +1,17 @@
 import React from 'react';
-import styled from 'styled-components/native';
+import { useNavigation } from '@react-navigation/native';
 
-import {FullButton} from '../styles/form';
-import {WhiteText} from '../styles/text';
+import { FullButton } from '../styles/form';
+import { FontText } from '../styles/text';
 
 export default function FormButton(props) {
+  const navigation = useNavigation();
+
   return (
-    <FullButton>
-      <WhiteText>{props.string}</WhiteText>
+    <FullButton onPress={() => navigation.navigate(props.path)}>
+      <FontText color="white" size="18px">
+        {props.string}
+      </FontText>
     </FullButton>
   );
 }

@@ -1,15 +1,7 @@
-import React from 'react';
-import styled from 'styled-components';
+import styled from 'styled-components/native';
 
 export const FontText = styled.Text`
   font-family: 'Montserrat-SemiBold';
-  font-size: 18px;
-`;
-
-export const WhiteText = styled(FontText)`
-  color: white;
-`;
-
-export const BlueText = styled(FontText)`
-  color: #002f67;
+  color: ${props => props.color};
+  font-size: ${props => props.size};
 `;
