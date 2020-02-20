@@ -9,6 +9,7 @@ import Login from '../pages/Login';
 import SignUp from '../pages/SignUp';
 import Home from '../pages/Home';
 import Profile from '../pages/Profile';
+import DrawerContent from '../components/DrawerContent';
 
 const Stack = createStackNavigator();
 const Drawer = createDrawerNavigator();
@@ -30,7 +31,9 @@ export default function App() {
           />
         </Stack.Navigator>
       ) : (
-        <Drawer.Navigator drawerPosition="left">
+        <Drawer.Navigator
+          drawerContent={props => <DrawerContent {...props} />}
+          drawerStyle={{ backgroundColor: '#002f67' }}>
           <Drawer.Screen name="Home" component={Home} />
           <Drawer.Screen name="Profile" component={Profile} />
         </Drawer.Navigator>
