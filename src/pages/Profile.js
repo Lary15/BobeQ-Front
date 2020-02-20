@@ -2,6 +2,7 @@ import React from 'react';
 import { Text, TouchableOpacity } from 'react-native';
 
 import { CenteredView } from '../styles/form';
+import Navbar from '../components/Navbar';
 
 export default function Home({ navigation }) {
   navigation.setOptions({
@@ -9,10 +10,13 @@ export default function Home({ navigation }) {
   });
 
   return (
-    <CenteredView>
-      <TouchableOpacity>
-        <Text>Oi</Text>
-      </TouchableOpacity>
-    </CenteredView>
+    <>
+      <Navbar title="Lary" leftArrow={true} />
+      <CenteredView>
+        <TouchableOpacity>
+          <Text>Oi</Text>
+        </TouchableOpacity>
+      </CenteredView>
+    </>
   );
 }

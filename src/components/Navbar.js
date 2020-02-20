@@ -21,17 +21,17 @@ export default function Navbar(props) {
           onPress={() => navigation.goBack()}
         />
       ) : (
-        <View />
+        <FontAwesomeIcon
+          icon={faBars}
+          color={'white'}
+          size={30}
+          onPress={() => navigation.toggleDrawer()}
+        />
       )}
       <FontText color="white" size="20px">
         {props.title}
       </FontText>
-      <FontAwesomeIcon
-        icon={faBars}
-        color={'white'}
-        size={30}
-        onPress={() => navigation.dispatch(DrawerActions.toggleDrawer())}
-      />
+      <View style={{ width: 20 }} />
     </Nav>
   );
 }

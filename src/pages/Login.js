@@ -14,7 +14,7 @@ export default function Login({ navigation }) {
       <Image source={bopeQ} />
       <FormInput placeholder="Nome" />
       <FormInput placeholder="Email" />
-      <FormButton string="Entrar" path="Main" />
+      <FormButton string="Entrar" path="Home" />
       <FormOutlinedButton string="Cadastro" path="SignUp" />
     </CenteredView>
   );

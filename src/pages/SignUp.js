@@ -17,7 +17,7 @@ export default function SignUp({ navigation }) {
       <FormInput placeholder="Email" />
       <FormInput placeholder="Senha" />
       <FormInput placeholder="Confirmação de Senha" />
-      <FormButton string="Cadastrar" path="Main" />
+      <FormButton string="Cadastrar" path="Home" />
     </CenteredView>
   );
 }
