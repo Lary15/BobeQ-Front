@@ -27,7 +27,7 @@ export const FullButton = styled.TouchableOpacity`
   justify-content: center;
   align-items: center;
   border-radius: 5px;
-  margin-top: 45px;
+  margin-top: 15px;
 `;
 
 export const BorderButton = styled(FullButton)`

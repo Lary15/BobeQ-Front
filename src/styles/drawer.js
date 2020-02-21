@@ -23,9 +23,9 @@ export const TextView = styled.View`
 `;
 export const Item = styled.TouchableOpacity`
   height: 50px;
-  border: 1px solid #ffffff50;
+  border-color: #ffffff50;
   border-top-width: ${props => props.topWidth}px;
-  border-bottom-width:  ${props => props.bottomWidth}px;
+  border-bottom-width: ${props => props.bottomWidth}px;
   padding: 20px;
   flex-direction: row;
   align-items: center;

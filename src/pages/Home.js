@@ -1,20 +1,46 @@
-import React from 'react';
-import { Image, TouchableOpacity } from 'react-native';
+import React, { useState } from 'react';
+import ModalProvider from '../services/ModalProvider';
 
-import bopeQ from '../assets/images/bopeQ.png';
-
-import { CenteredView } from '../styles/form';
+import { GreyView } from '../styles/card';
 import Navbar from '../components/Navbar';
+import Card from '../components/Card';
+import CardModal from '../components/CardModal';
 
-export default function Home({ navigation }) {
+export default function Home() {
+  const [showModal, setShowModal] = useState(false);
+
   return (
-    <>
+    <ModalProvider.Provider value={showModal}>
       <Navbar title="Meus clientes" />
-      <CenteredView>
-        <TouchableOpacity>
-          <Image source={bopeQ} />
-        </TouchableOpacity>
-      </CenteredView>
-    </>
+      <GreyView
+        contentContainerStyle={{ alignItems: 'center' }}
+        showsVerticalScrollIndicator={false}>
+        <CardModal dismissModal={() => setShowModal(false)} />
+        <Card
+          name="Gustavo Rezende"
+          phone="(76) 34342-3223"
+          email="luisfifa10@yahoo.com.br"
+          onPress={() => setShowModal(true)}
+        />
+        <Card
+          name="Gustavo Rezende"
+          phone="(76) 34342-3223"
+          email="eduardo.miorim@advocatta.org"
+          onPress={() => setShowModal(true)}
+        />
+        <Card
+          name="Gustavo Rezende"
+          phone="(76) 34342-3223"
+          email="josebernardo@garan.com.br"
+          onPress={() => setShowModal(true)}
+        />
+        <Card
+          name="Gustavo Rezende"
+          phone="(76) 34342-3223"
+          email="josebernardo@garan.com.br"
+          onPress={() => setShowModal(true)}
+        />
+      </GreyView>
+    </ModalProvider.Provider>
   );
 }
