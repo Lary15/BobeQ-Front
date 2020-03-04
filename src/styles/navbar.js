@@ -10,3 +10,9 @@ export const Nav = styled.View`
   display: flex;
   padding: 0 10px;
 `;
+
+export const IconTouchable = styled.TouchableOpacity`
+  height: 30px;
+  width: 30px;
+  border-radius: 15px;
+`;

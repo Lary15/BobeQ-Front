@@ -1,9 +1,8 @@
 import React from 'react';
 import { View } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import { DrawerActions } from '@react-navigation/native';
 
-import { Nav } from '../styles/navbar';
+import { Nav, IconTouchable } from '../styles/navbar';
 import { FontText } from '../styles/text';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faBars, faChevronLeft } from '@fortawesome/free-solid-svg-icons';
@@ -14,21 +13,25 @@ export default function Navbar(props) {
   return (
     <Nav>
       {props.leftArrow ? (
-        <FontAwesomeIcon
-          icon={faChevronLeft}
-          color={'white'}
-          size={30}
-          onPress={() => navigation.goBack()}
-        />
+        <IconTouchable>
+          <FontAwesomeIcon
+            icon={faChevronLeft}
+            color={'white'}
+            size={30}
+            onPress={() => navigation.goBack()}
+          />
+        </IconTouchable>
       ) : (
-        <FontAwesomeIcon
-          icon={faBars}
-          color={'white'}
-          size={30}
-          onPress={() => navigation.toggleDrawer()}
-        />
+        <IconTouchable>
+          <FontAwesomeIcon
+            icon={faBars}
+            color={'white'}
+            size={30}
+            onPress={() => navigation.toggleDrawer()}
+          />
+        </IconTouchable>
       )}
-      <FontText color="white" size="20px">
+      <FontText color="white" size="22px">
         {props.title}
       </FontText>
       <View style={{ width: 20 }} />

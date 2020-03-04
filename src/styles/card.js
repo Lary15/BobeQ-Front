@@ -1,6 +1,6 @@
 import styled from 'styled-components/native';
 
-export const GreyView = styled.ScrollView`
+export const GreyView = styled.FlatList`
   background-color: #e5e5e5;
   flex: 1;
   padding: 25px;
@@ -15,6 +15,8 @@ export const Background = styled.TouchableOpacity`
   box-shadow: 10px 5px 5px black;
   padding: 20px 25px;
   margin-bottom: 30px;
+  box-shadow: 20px 15px 5px black;
+  elevation: 5;
 `;
 
 export const Row = styled.View`
@@ -32,7 +34,7 @@ export const Blur = styled.View`
 
 export const ModalBackground = styled.View`
   background-color: white;
-  height: 420px;
+  height: 426px;
   width: 320px;
   border-radius: 5px;
   padding: 10px;

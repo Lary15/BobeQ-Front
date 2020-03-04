@@ -1,9 +1,9 @@
 import styled from 'styled-components/native';
 
 export const CirculeImage = styled.Image`
-  border-radius: 50px;
-  height: 95px;
-  width: 95px;
+  border-radius: ${props => props.radius || '50px'};
+  height: ${props => props.height || '95px'};
+  width: ${props => props.width || '95px'};
 `;
 
 export const DrawerHeader = styled.View`

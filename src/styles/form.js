@@ -7,7 +7,13 @@ export const CenteredView = styled.View`
   background-color: #e5e5e5;
 `;
 
-export const StyledInput = styled.TextInput`
+export const CenteredScrollView = styled.ScrollView`
+  flex: 1;
+  background-color: #e5e5e5;
+  padding-top: 30px;
+`;
+
+export const FormInput = styled.TextInput`
   height: 45px;
   width: 320px;
   border: solid 1.5px #cccccc;
@@ -27,7 +33,7 @@ export const FullButton = styled.TouchableOpacity`
   justify-content: center;
   align-items: center;
   border-radius: 5px;
-  margin-top: 15px;
+  margin-top: ${props => props.marginTop || '15px'};
 `;
 
 export const BorderButton = styled(FullButton)`

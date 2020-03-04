@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { DrawerContentScrollView } from '@react-navigation/drawer';
 
+import { AuthContext } from '../providers/AuthProvider';
 import { CirculeImage, DrawerHeader, TextView, Item } from '../styles/drawer';
 import { FontText } from '../styles/text';
 import bowser from '../assets/images/bowser.jpeg';
@@ -14,6 +15,8 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export default function DrawerContent(props) {
+  const authContext = useContext(AuthContext);
+
   return (
     <DrawerContentScrollView {...props}>
       <DrawerHeader>
@@ -42,13 +45,19 @@ export default function DrawerContent(props) {
           Editar Perfil
         </FontText>
       </Item>
-      <Item topWidth={0.5} bottomWidth={0.5}>
+      <Item
+        onPress={() => props.navigation.navigate('ChangePassword')}
+        topWidth={0.5}
+        bottomWidth={0.5}>
         <FontAwesomeIcon icon={faLock} color={'white'} size={22} />
         <FontText color="white" size="18px" style={{ paddingLeft: 15 }}>
           Alterar Senha
         </FontText>
       </Item>
-      <Item topWidth={0.5} bottomWidth={1}>
+      <Item
+        topWidth={0.5}
+        bottomWidth={1}
+        onPress={() => authContext.signOut()}>
         <FontAwesomeIcon icon={faTimesCircle} color={'white'} size={22} />
         <FontText color="white" size="18px" style={{ paddingLeft: 15 }}>
           Sair

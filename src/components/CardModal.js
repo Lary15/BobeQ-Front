@@ -1,7 +1,8 @@
 import React from 'react';
-import ModalProvider from '../services/ModalProvider';
+import ModalProvider from '../providers/ModalProvider';
 import { Modal, TouchableOpacity, View, ScrollView } from 'react-native';
 
+import { IconTouchable } from '../styles/navbar';
 import { BoldText, RegularText, FontText } from '../styles/text';
 import { ModalBackground, Row, Blur, Exit, FullButton } from '../styles/card';
 
@@ -22,9 +23,9 @@ export default function CardModal(props) {
           <Blur>
             <ModalBackground>
               <Exit>
-                <TouchableOpacity onPress={props.dismissModal}>
+                <IconTouchable onPress={props.dismissModal}>
                   <FontAwesomeIcon icon={faTimes} color={'grey'} size={23} />
-                </TouchableOpacity>
+                </IconTouchable>
               </Exit>
               <View style={{ paddingHorizontal: 30 }}>
                 <BoldText

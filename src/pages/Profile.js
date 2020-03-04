@@ -1,8 +1,11 @@
 import React from 'react';
-import { Text, TouchableOpacity } from 'react-native';
 
-import { CenteredView } from '../styles/form';
+import { CenteredScrollView } from '../styles/form';
+import { CirculeImage } from '../styles/drawer';
+import { FormInput } from '../styles/form';
 import Navbar from '../components/Navbar';
+import FormButton from '../components/FormButton';
+import bowser from '../assets/images/bowser.jpeg';
 
 export default function Home({ navigation }) {
   navigation.setOptions({
@@ -12,11 +15,22 @@ export default function Home({ navigation }) {
   return (
     <>
       <Navbar title="Lary" leftArrow={true} />
-      <CenteredView>
-        <TouchableOpacity>
-          <Text>Oi</Text>
-        </TouchableOpacity>
-      </CenteredView>
+      <CenteredScrollView
+        contentContainerStyle={{
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}
+        showsVerticalScrollIndicator={false}>
+        <CirculeImage
+          height="160px"
+          width="160px"
+          radius="80px"
+          source={bowser}
+        />
+        <FormInput placeholder="Nome" />
+        <FormInput placeholder="Email" />
+        <FormButton string="Atualizar" path="Home" marginTop="35px" />
+      </CenteredScrollView>
     </>
   );
 }
